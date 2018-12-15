@@ -1,6 +1,114 @@
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
+
+.detailedInfo{
+  display: flex;
+  flex:1;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 20px;
+}
+
+.list {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: stretch;
+  margin-left: 20px;
+  overflow-y: scroll;
+}
+
+.itemCont{
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background-color: #282c34;
+  margin: 4px;
+  padding: 4px;
+  border-radius: 8px;
+
+}
+
+.listItem{
+  flex:3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 8px;
+
+}
+
+.updateButton{
+  flex: 1;
+  background-color: green;
+  align-self: center;
+  border-radius: 4px;
+  margin: 8px;
+}
+
+.updateButton:hover{
+  animation-name: example;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0%   {background-color: green;}
+  50%  {background-color: cyan;}
+  100% {background-color: green;}
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  flex: 9;
+  flex-basis: 90vh;
+}
+
+.infoContainer{
+  flex:1;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.detailedInfoBox{
+  display: flex;
+  flex-direction: column;
+  flex:3;
+  background-color: #282c34;
+  margin: 4px;
+  padding: 4px;
+  border-radius: 8px;
+  color: white;
+}
+
+.updateBox{
+  display: flex;
+  flex-direction: column;
+  flex:2;
+  background-color: #282c34;
+  margin: 4px;
+  padding: 4px;
+  border-radius: 8px;
+  color: white;
+}
+
+
+
+.Genus{color: white;
+font-family: monospace;}
+
+.Species{color: white;
+font-family: monospace;}
+
+.Comname{color: white;
+font-family: monospace;
+margin-bottom: 4px;}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -9,17 +117,24 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  flex:1;
+  flex-basis: 8vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(20px);
   color: white;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.hidden{
+  visibility: hidden;
+}
+
+.visible{
+  visibility: visible;
 }
 
 @keyframes App-logo-spin {
